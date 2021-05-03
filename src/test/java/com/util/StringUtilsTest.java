@@ -17,28 +17,28 @@ public class StringUtilsTest {
 	@ParameterizedTest
 	@CsvSource(value = {"a:false", "'':true", "'  	':false"}, delimiter = ':')
 	@DisplayName("빈 문자열 체크 테스트")
-	void isEmptyTest(String str, boolean expected ) {
+	void isEmptyTest(String str, boolean expected) {
 		assertThat(StringUtils.isEmpty(str)).isEqualTo(expected);
 	}
 	
 	@ParameterizedTest
 	@CsvSource(value = {"a:true", "'':false", "'  	':true"}, delimiter = ':')
 	@DisplayName("유효 문자열 체크 테스트")
-	void hasTextTest(String str, boolean expected ) {
+	void hasTextTest(String str, boolean expected) {
 		assertThat(StringUtils.hasText(str)).isEqualTo(expected);
 	}
 	
 	@ParameterizedTest
 	@CsvSource(value = {"' ':''", "'	 ':''", "a b	c:abc"}, delimiter = ':')
 	@DisplayName("공백 제거 테스트")
-	void trimWhiteSpaceAndTabTest(String str, String expected ) {
+	void trimWhiteSpaceAndTabTest(String str, String expected) {
 		assertThat(StringUtils.trimWhiteSpaceAndTab(str)).isEqualTo(expected);
 	}
 	
 	@ParameterizedTest
 	@CsvSource(value = {"1:true", "r:false", "' ':false", "0:true"}, delimiter = ':')
 	@DisplayName("숫자타입 체크 테스트")
-	void isNumberTest(String str, boolean expected ) {
+	void isNumberTest(String str, boolean expected) {
 		assertThat(StringUtils.isNumber(str)).isEqualTo(expected);
 	}
 	

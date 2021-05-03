@@ -21,4 +21,17 @@ public abstract class ValidationUtils {
 		return carName.length() > RacingCarGameConstant.ZERO && carName.length() <= RacingCarGameConstant.MAX_CAR_SIZE;
 	}
 	
+	/**
+	 * 유효한 게임 카운트인지 체크합니다.
+	 *
+	 * @param gameCount
+	 * @return boolean
+	 */
+	public static boolean validateGameCount(String gameCount) {
+		if (StringUtils.isEmpty(gameCount) || StringUtils.isText(gameCount)) {
+			return false;
+		}
+		return Integer.parseInt(gameCount) != RacingCarGameConstant.ZERO;
+	}
+	
 }

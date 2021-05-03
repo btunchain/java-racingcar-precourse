@@ -48,7 +48,7 @@ public abstract class StringUtils {
 		if (isEmpty(str)) {
 			return false;
 		}
-		return str.matches("^[0-9]*$" );
+		return str.matches("^[0-9]*$");
 	}
 	
 	/**

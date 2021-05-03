@@ -23,4 +23,11 @@ public class ValidationUtilsTest {
 		assertThat(ValidationUtils.validateCarName(insertText)).isFalse();
 	}
 	
+	@ParameterizedTest
+	@CsvSource(value = {"1:true", "0:false", "r:false", "'':false"}, delimiter = ':')
+	@DisplayName("게임 횟수 유효성 테스트")
+	void validateGameCountTest(String insertText, boolean expected) {
+		assertThat(ValidationUtils.validateGameCount(insertText)).isEqualTo(expected);
+	}
+	
 }
