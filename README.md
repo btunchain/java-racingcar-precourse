@@ -28,7 +28,10 @@
     - RacingCarGameConstant : 레이싱 게임 관련 상수 정의 클래스
 * service
     - RacingCarGame : 레이싱 게임 로직 클래스
+    - RacingCarSetting : 레이싱 자동차 설정 클래스
+    - RacingCountSetting : 레이싱 카운트 설정 클래스
 * util
+    - ListUtils : List 관련 유틸 클래스
     - UIUtils : UI 관련 유틸 클래스
     - StringUtils : 문자열 관련 유틸 클래스
 * vo
