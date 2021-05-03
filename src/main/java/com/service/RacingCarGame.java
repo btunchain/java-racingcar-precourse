@@ -26,6 +26,8 @@ public class RacingCarGame {
 		UIUtils.printLineConsole(RacingCarGameConstant.EXECUTE_RESULT);
 		UIUtils.printLineConsole(RacingCarGameConstant.EMPTY_STR);
 		race.start();
+		UIUtils.printLineConsole(race.getResult().concat(RacingCarGameConstant.WINNER_RESULT));
+		UIUtils.closeScanner(scanner);
 	}
 	
 	/**

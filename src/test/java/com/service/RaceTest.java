@@ -20,4 +20,13 @@ public class RaceTest {
 		new Race(racingCarSetting, racingCountSetting).start();
 	}
 	
+	@Test
+	@DisplayName("경기 결과 테스트")
+	void getResultTest() {
+		Race race = new Race(racingCarSetting, racingCountSetting);
+		race.start();
+		String result = race.getResult();
+		System.out.println(result);
+	}
+	
 }
