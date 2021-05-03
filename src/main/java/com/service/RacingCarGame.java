@@ -21,7 +21,49 @@ public class RacingCarGame {
 	*/
 	public void startGame() {
 		Scanner scanner = UIUtils.initScanner();
-		UIUtils.printLineConsole(RacingCarGameConstant.ENTER_CAR_NAME);
+		Race race = new Race(setCar(scanner), setCount(scanner));
+		
+		UIUtils.printLineConsole(RacingCarGameConstant.EXECUTE_RESULT);
+		UIUtils.printLineConsole(RacingCarGameConstant.EMPTY_STR);
+		race.start();
+	}
+	
+	/**
+	 * 차량 정보를 설정합니다.
+	 *
+	 * @param scanner
+	 * @return RacingCarSetting
+	 */
+	private RacingCarSetting setCar(Scanner scanner) {
+		
+		RacingCarSetting racingCarSetting = null;
+		int carCount = RacingCarGameConstant.ZERO;
+		
+		while (RacingCarGameConstant.ZERO == carCount) {
+			UIUtils.printLineConsole(RacingCarGameConstant.ENTER_CAR_NAME);
+			racingCarSetting = new RacingCarSetting(scanner.nextLine());
+			carCount = racingCarSetting.getCarCount();
+		}
+		return racingCarSetting;
+	}
+	
+	/**
+	 * 경기 횟수를 설정합니다.
+	 *
+	 * @param scanner
+	 * @return RacingCountSetting
+	 */
+	private RacingCountSetting setCount(Scanner scanner) {
+		RacingCountSetting racingCountSetting = null;
+		int gameCount = RacingCarGameConstant.ZERO;
+		
+		while (RacingCarGameConstant.ZERO == gameCount) {
+			UIUtils.printLineConsole(RacingCarGameConstant.COUNT_CHECK);
+			racingCountSetting = new RacingCountSetting(scanner.nextLine());
+			gameCount = racingCountSetting.getGameCount();
+		}
+		
+		return racingCountSetting;
 	}
 	
 }

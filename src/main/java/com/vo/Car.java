@@ -23,4 +23,12 @@ public class Car {
 		progress = progress.concat(RacingCarGameConstant.DASH);
 	}
 	
+	public boolean checkCarMove() {
+		return RacingCarGameConstant.MOVE_MIN_NUMBER <= getRandomNumber();
+	}
+	
+	private int getRandomNumber() {
+		return (int)Math.floor(Math.random() * 10);
+	}
+	
 }
