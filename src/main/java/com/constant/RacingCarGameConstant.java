@@ -11,6 +11,8 @@ public class RacingCarGameConstant {
 	public static final String COLON = " : ";
 	public static final String DASH = "-";
 	public static final String DELIMITER_COMMA = ",";
+	public static final int ZERO = 0;
+	public static final int MAX_CAR_SIZE = 5;
 	
 	public static final String ENTER_CAR_NAME = "경주할 자동차 이름을 입력하세요.(이름은 쉼표(,) 기준으로 구분)";
 	public static final String VALIDATE_CAR_NAME = "올바른 자동차 이름이 아닙니다. 다시 입력해주세요.";

@@ -18,10 +18,6 @@ public abstract class UIUtils {
 		scanner.close();
 	}
 	
-	public static void printConsole(String str) {
-		System.out.print(str);
-	}
-	
 	public static void printLineConsole(String str) {
 		System.out.println(str);
 	}
