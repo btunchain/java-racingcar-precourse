@@ -14,19 +14,22 @@
 3. 차량명 입력
     - 3-1. 입력 문자 Split
     - 3-2. 차량명 유효성 체크
-4. 이동 횟수 입력
+4. 경주 횟수 입력
     - 4-1. 입력 이동 횟수 유효성 체크
-5. 난수 생성
-6. 자동차 전진
-7. 이동횟수 만큼의 5~6 반복 로직
-8. 결과 계산
-9. 결과 출력
-10. UI Close
+5. 경주 시작
+    - 5-1. 자동차별 난수 생성
+    - 5-2. 5-1번 결과에 따른 이동여부
+6. 경주횟수 만큼의 5번 반복 로직
+7. 결과 계산
+8. 결과 출력
+9. UI Close
 
 ## 구현 클래스
+### main
 * constant
     - RacingCarGameConstant : 레이싱 게임 관련 상수 정의 클래스
 * service
+    - Race : 경주 진행 로직 클래스
     - RacingCarGame : 레이싱 게임 로직 클래스
     - RacingCarSetting : 레이싱 자동차 설정 클래스
     - RacingCountSetting : 레이싱 카운트 설정 클래스
@@ -34,8 +37,22 @@
     - ListUtils : List 관련 유틸 클래스
     - UIUtils : UI 관련 유틸 클래스
     - StringUtils : 문자열 관련 유틸 클래스
+    - ValidationUtils : 유효성 체크 유틸 클래스
 * vo
     - Car : 차량정보 클래스
     - Cars : 차량정보 리스트 클래스
 </br></br>
 * StartApplication : application 실행 클래스
+
+### test
+* service
+    - RaceTest
+    - RacingCarGameTest
+    - RacingCarSettingTest
+    - RacingCountSettingTest
+* util
+    - ListUtilsTest
+    - StringUtilsTest
+    - ValidationUtilsTest
+* vo
+    - CarTest
